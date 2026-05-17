@@ -1,6 +1,6 @@
 export const heroContent = {
-  title: 'Plan your perfect trip',
+  title: 'Plan your perfect holiday',
   subtitle:
-    'Discover hotels, weather forecasts, and top attractions — all in one place. Your next adventure starts here.',
+    'Enter your destination, dates and budget — get the weather, top attractions and hotels in seconds.',
   ctaText: 'Start planning',
 }
