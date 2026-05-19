@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { ExternalLink } from 'lucide-react'
-import { Badge } from '@/components/ui/Badge'
 import type { Attraction } from '@/types/attraction.types'
 
 interface AttractionCardProps extends Attraction {}
@@ -18,9 +17,8 @@ export function AttractionCard({
     .map((k) => k.replace(/_/g, ' '))
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-700 bg-slate-800/60 backdrop-blur-sm transition-all duration-300 hover:border-indigo-700 hover:-translate-y-1">
-      {/* Image or placeholder */}
-      <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-100">
+      <div className="relative h-44 w-full overflow-hidden bg-orange-50">
         {image ? (
           <Image
             src={image}
@@ -30,27 +28,30 @@ export function AttractionCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-indigo-900/40 to-violet-900/40">
-            <span className="text-5xl opacity-30">🗺️</span>
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-orange-100 to-amber-100">
+            <span className="text-6xl opacity-60">🏛️</span>
           </div>
         )}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <h3 className="font-bold text-white line-clamp-2">{name}</h3>
+        <h3 className="font-bold text-stone-800 line-clamp-2">{name}</h3>
 
         {displayKinds.length > 0 && (
           <div className="flex flex-wrap gap-1.5">
             {displayKinds.map((kind) => (
-              <Badge key={kind} variant="indigo">
+              <span
+                key={kind}
+                className="rounded-full bg-orange-100 px-2.5 py-0.5 text-xs font-medium text-orange-600 capitalize"
+              >
                 {kind}
-              </Badge>
+              </span>
             ))}
           </div>
         )}
 
         {description && (
-          <p className="text-sm text-slate-400 line-clamp-2">{description}</p>
+          <p className="text-sm text-stone-500 line-clamp-2">{description}</p>
         )}
 
         {wikipediaUrl && (
@@ -58,10 +59,10 @@ export function AttractionCard({
             href={wikipediaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto inline-flex items-center gap-1.5 text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
+            className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-orange-500 hover:text-orange-600 transition-colors"
           >
             <ExternalLink className="h-3.5 w-3.5" />
-            Wikipedia
+            Read more
           </a>
         )}
       </div>
