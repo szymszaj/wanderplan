@@ -1,20 +1,23 @@
 export const featuresContent = [
   {
     icon: 'Cloud',
-    title: 'Live Weather Forecasts',
+    emoji: '☀️',
+    title: 'Live Weather Forecast',
     description:
-      'Get accurate 5-day weather forecasts for your destination so you can pack right and plan activities with confidence.',
+      'See exactly what the weather will be like on each day of your trip. Pack right, plan right.',
   },
   {
     icon: 'MapPin',
+    emoji: '🗺️',
     title: 'Top Attractions',
     description:
-      'Discover must-see landmarks and hidden gems curated from OpenTripMap\'s database of millions of places worldwide.',
+      'Discover the best places to visit — museums, landmarks, hidden gems — curated just for your destination.',
   },
   {
-    icon: 'Hotel',
-    title: 'Hotel Deals',
+    icon: 'Building2',
+    emoji: '🏨',
+    title: 'Hotels in Budget',
     description:
-      'Browse hotels within your budget powered by Amadeus — with real-time availability and transparent pricing.',
+      'Enter your budget and instantly see hotels that fit. No more endless scrolling through booking sites.',
   },
 ]
