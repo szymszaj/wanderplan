@@ -1,18 +1,18 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import { Nav } from '@/components/nav'
-import { navContent } from '@/content/nav.content'
+import type { Metadata } from "next";
+import "./globals.css";
+import { Nav } from "@/components/nav";
+import { navContent } from "@/content/nav.content";
 
 export const metadata: Metadata = {
-  title: 'WanderPlan – Travel Planner',
+  title: "WanderPlan – Travel Planner",
   description:
-    'Plan your perfect trip with live weather forecasts, top attractions, and hotel deals all in one place.',
-}
+    "Plan your perfect trip with live weather forecasts, top attractions, and hotel deals all in one place.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -30,5 +30,5 @@ export default function RootLayout({
         </footer>
       </body>
     </html>
-  )
+  );
 }

@@ -1,15 +1,17 @@
-import { AttractionCard } from './AttractionCard'
-import type { Attraction } from '@/types/attraction.types'
+import { AttractionCard } from "./AttractionCard";
+import type { Attraction } from "@/types/attraction.types";
 
 interface AttractionsGridProps {
-  attractions: Attraction[]
+  attractions: Attraction[];
 }
 
 export function AttractionsGrid({ attractions }: AttractionsGridProps) {
   if (attractions.length === 0) {
     return (
-      <p className="text-slate-400 italic">No attractions found for this city.</p>
-    )
+      <p className="text-slate-400 italic">
+        No attractions found for this city.
+      </p>
+    );
   }
 
   return (
@@ -18,5 +20,5 @@ export function AttractionsGrid({ attractions }: AttractionsGridProps) {
         <AttractionCard key={attraction.xid} {...attraction} />
       ))}
     </div>
-  )
+  );
 }

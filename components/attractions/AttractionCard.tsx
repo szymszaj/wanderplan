@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { ExternalLink } from 'lucide-react'
-import type { Attraction } from '@/types/attraction.types'
+import Image from "next/image";
+import { ExternalLink } from "lucide-react";
+import type { Attraction } from "@/types/attraction.types";
 
 interface AttractionCardProps extends Attraction {}
 
@@ -12,9 +12,9 @@ export function AttractionCard({
   description,
 }: AttractionCardProps) {
   const displayKinds = kinds
-    .filter((k) => k && k !== 'interesting_places')
+    .filter((k) => k && k !== "interesting_places")
     .slice(0, 3)
-    .map((k) => k.replace(/_/g, ' '))
+    .map((k) => k.replace(/_/g, " "));
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-100">
@@ -67,5 +67,5 @@ export function AttractionCard({
         )}
       </div>
     </div>
-  )
+  );
 }
